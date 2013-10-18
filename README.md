@@ -47,7 +47,7 @@ $ tshark -i <your interface> -w /tmp/capture.pcap
 Start pulling messages out of the capture file:
 
 ``` sh
-$ sudo ./fbcsniff.py -l -c /tmp/capture.py
+$ sudo ./fbcsniff.py -l -c /tmp/capture.pcap
 ```
 
 
