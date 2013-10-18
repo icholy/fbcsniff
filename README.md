@@ -10,6 +10,19 @@
 $ sudo apt-get install python-dpkt
 ```
 
+### Options:
+
+```
+usage: python fbcsniff.py [OPTIONS] -c <pcap file>
+
+-c <pcap file>
+-f <msg filter> (comma separated)
+-s <sleep time> (use with -l)
+-o <output file>
+-l (keep looking for new messages)
+-h (show this message)
+```
+
 ### Usage Example:
 
 I'm using ettercap and tshark
@@ -27,14 +40,14 @@ $ sudo ettercap -T -M arp -i <your interface> // // -p auto_add
 Start tshark capture:
 
 ``` sh
-sudo -i
-tshark -i <your interface> -w /tmp/capture.pcap
+$ sudo -i
+$ tshark -i <your interface> -w /tmp/capture.pcap
 ```
 
 Start pulling messages out of the capture file:
 
 ``` sh
-sudo ./fbcsniff.py -l -c /tmp/capture.py
+$ sudo ./fbcsniff.py -l -c /tmp/capture.py
 ```
 
 
